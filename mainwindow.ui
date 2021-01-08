@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>279</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>525</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QListWidget" name="listWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="batchSize">
+      <number>20</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>合同管理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>工时管理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>员工管理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>片区管理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>技能管理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>绩效管理</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTableView" name="tableView">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>561</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenDB"/>
+    <addaction name="actionInput"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionRecAppend"/>
+    <addaction name="actionRecDelete"/>
+    <addaction name="actionRecInsert"/>
+    <addaction name="separator"/>
+    <addaction name="actionRevert"/>
+    <addaction name="actionSubmit"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>功能</string>
+    </property>
+    <addaction name="actionCalworkingHours"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>查询</string>
+    </property>
+    <addaction name="actionHoursquery"/>
+    <addaction name="actionUserQuery"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenDB"/>
+   <addaction name="actionInput"/>
+   <addaction name="separator"/>
+   <addaction name="actionRecAppend"/>
+   <addaction name="actionRecInsert"/>
+   <addaction name="actionRecDelete"/>
+   <addaction name="separator"/>
+   <addaction name="actionSubmit"/>
+   <addaction name="actionRevert"/>
+   <addaction name="separator"/>
+   <addaction name="actionCalworkingHours"/>
+   <addaction name="separator"/>
+   <addaction name="actionHoursquery"/>
+   <addaction name="actionUserQuery"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpenDB">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionRecAppend">
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </action>
+  <action name="actionRecDelete">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="actionRecInsert">
+   <property name="text">
+    <string>插入</string>
+   </property>
+  </action>
+  <action name="actionSubmit">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actionRevert">
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </action>
+  <action name="actionCalworkingHours">
+   <property name="text">
+    <string>计算工时</string>
+   </property>
+  </action>
+  <action name="actionInput">
+   <property name="text">
+    <string>导入</string>
+   </property>
+  </action>
+  <action name="actionHoursquery">
+   <property name="text">
+    <string>片区查询</string>
+   </property>
+   <property name="toolTip">
+    <string>片区查询</string>
+   </property>
+  </action>
+  <action name="actionUserQuery">
+   <property name="text">
+    <string>人员查询</string>
+   </property>
+   <property name="toolTip">
+    <string>人员查询</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
